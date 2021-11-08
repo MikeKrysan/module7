@@ -1,6 +1,6 @@
 package Solution7_2_2;
 
-public abstract class Monster {
+abstract public class Monster {
     // Fix this class
     private String name;
     private int force;
@@ -17,9 +17,10 @@ public abstract class Monster {
         return force;
     }
 
+    public boolean isDestroyed() {
+        return destroyed;
+    }
 
-
-    abstract public void attack(Monster monster);
 
     protected boolean damage(int dhp) {
         hp -= dhp;
@@ -31,11 +32,8 @@ public abstract class Monster {
         return false;
     }
 
-    public boolean isDestroyed() {
-        return destroyed;
-    }
-
     abstract public void growl();
 
+    abstract public void attack(Monster monster);
 
 }

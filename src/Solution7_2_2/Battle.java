@@ -21,7 +21,7 @@ public class Battle {
     public void run() {
         for( int i = 0; i < n; i++ ) {
             if(monsters[i]!=null) {
-                monsters[i].attack();
+                monsters[i].attack(monsters[i]);
             }
         }
     }
